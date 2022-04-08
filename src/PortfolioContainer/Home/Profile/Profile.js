@@ -1,6 +1,7 @@
 import React from "react";
 import Typical from "react-typical";
 import "./Profile.css";
+import ScrollService from "../../../utilities/ScrollService";
 
 const Profile = () => {
   return (
@@ -41,8 +42,8 @@ const Profile = () => {
                   loop={Infinity}
                   steps={[
                     "I'M Programmer💻",
-                    1000,
-                    "React/React-Native Dev📱",
+                    1200,
+                    "Full Stack Dev📱",
                     1000,
                     "18 - 10 - 2002🎁",
                     1000,
@@ -58,7 +59,9 @@ const Profile = () => {
             </span>
           </div>
           <div className="profile-options">
-            <button className="btn primary-btn">{""}Hire Me </button>
+            <button className="btn primary-btn"
+            onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
+            >Hire Me </button>
             <a href="ehizcv.pdf" download="ehizcv.pdf" target="_blank">
               {" "}
               {/*Chuyển trang vào CV */}
